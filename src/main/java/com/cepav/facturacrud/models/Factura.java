@@ -1,5 +1,8 @@
 package com.cepav.facturacrud.models;
 
+import java.sql.Date;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,8 +17,21 @@ public class Factura {
     private String apellido;
     @Column
     private Float valor;
+    @Column
+    private LocalDateTime fechacreacion;
+    
 
-    public Long getId() {
+
+
+	public LocalDateTime getFechacreacion() {
+		return fechacreacion;
+	}
+
+	public void setFechacreacion(LocalDateTime fechacreacion) {
+		this.fechacreacion = fechacreacion;
+	}
+
+	public Long getId() {
         return id;
     }
 

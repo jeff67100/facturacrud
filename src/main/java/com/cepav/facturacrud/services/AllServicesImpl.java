@@ -5,6 +5,7 @@ import com.cepav.facturacrud.repository.AllRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -18,6 +19,11 @@ public class AllServicesImpl implements IAllServices{
 
     @Override
     public Factura save(Factura factura) {
+    	LocalDateTime fechaHoraActual = LocalDateTime.now();
+    	factura.setFechacreacion(fechaHoraActual);
+    	Float valorFacturaActual = factura.getValor();
+    	Float valorDeLaFacturaConIva= valorFacturaActual*2;
+    	factura.setValor(valorDeLaFacturaConIva);
         return allRepository.save(factura);
     }
 
