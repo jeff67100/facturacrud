@@ -2,6 +2,7 @@ package com.cepav.facturacrud.services;
 
 import com.cepav.facturacrud.models.Factura;
 import com.cepav.facturacrud.repository.AllRepository;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class AllServicesImpl implements IAllServices{
     }
 
     @Override
-    public Factura save(Factura factura) {
+    public Factura save(@NotNull Factura factura) {
     	LocalDateTime fechaHoraActual = LocalDateTime.now();
     	factura.setFechacreacion(fechaHoraActual);
     	Float valorFacturaActual = factura.getValor();

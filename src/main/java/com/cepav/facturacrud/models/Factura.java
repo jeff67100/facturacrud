@@ -19,6 +19,8 @@ public class Factura {
     private Float valor;
     @Column
     private LocalDateTime fechacreacion;
+    @Column
+    private double calcularIva;
     
 
 

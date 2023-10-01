@@ -52,6 +52,9 @@ public class AllController {
         return ResponseEntity.ok(deleteFactura);
 
     }
+    public double ResponseEntity<Factura>{
+
+    }
 
 
 

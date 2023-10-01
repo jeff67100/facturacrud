@@ -11,4 +11,5 @@ public interface IAllServices {
     Factura findById(Long id);
 
     public void delete(Long id);
+
 }
