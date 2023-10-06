@@ -23,7 +23,7 @@ public class AllServicesImpl implements IAllServices{
     	LocalDateTime fechaHoraActual = LocalDateTime.now();
     	factura.setFechacreacion(fechaHoraActual);
     	Float valorFacturaActual = factura.getValor();
-    	Float valorDeLaFacturaConIva= valorFacturaActual*2;
+    	Float valorDeLaFacturaConIva= (valorFacturaActual*2);
     	factura.setValor(valorDeLaFacturaConIva);
         return allRepository.save(factura);
     }
